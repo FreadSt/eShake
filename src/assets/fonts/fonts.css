@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Rubik Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Rubik-Regular.ttf'); /* IE9 Compat Modes */
+    src: local('Rubik-Regular'),
+    url('./Rubik-Regular.eot') format('embedded-opentype'),
+    url('./Rubik-Regular.woff') format('woff'), /* Modern Browsers */
+    url('./Rubik-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'Rubik Bold';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./Rubik-Bold.ttf'); /* IE9 Compat Modes */
+    src: local('Rubik-Bold'),
+    url('./Rubik-Bold.eot') format('embedded-opentype'),
+    url('./Rubik-Bold.woff') format('woff'), /* Modern Browsers */
+    url('./Rubik-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}

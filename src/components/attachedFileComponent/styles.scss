@@ -1,0 +1,33 @@
+.attachment-card-component{
+  width: 100%;
+  border: 1px solid rgba(88, 150, 139, 0.3);
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 50px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  justify-content: space-between;
+  .name-block{
+    display: flex;
+    align-items: center;
+    .name{
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      color: #5BBEB0;
+      margin-left: 10px;
+      font-family: 'Rubik Regular';
+      margin-right: 5px;
+    }
+    .size-img{
+      letter-spacing: 0.01em;
+      color: #5BBEB0;
+      font-family: 'Rubik Regular';
+      opacity: 0.3;
+      font-size: 14px;
+      line-height: 150%;
+    }
+  }
+}

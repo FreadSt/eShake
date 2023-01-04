@@ -1,0 +1,41 @@
+.custom-description-block{
+  width: 100%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(205, 208, 220);
+  .title{
+    font-size: 20px;
+    line-height: 24px;
+    color: #161721;
+    font-family: 'Rubik Regular';
+    letter-spacing: 0.01em;
+    margin: 0 0 20px 0;
+  }
+  .description{
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0;
+    color: #161721;
+    opacity: 0.6;
+    height: auto;
+    overflow:hidden;
+    transition: max-height 1s ease-in;
+    letter-spacing: 0.01em;
+    font-family: 'Rubik Regular';
+  }
+  .read-more{
+    cursor: pointer;
+    display: flex;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #161721;
+    font-family: 'Rubik Regular';
+    .read-more-icon{
+      width: 13px;
+      height: 20px;
+      margin-left: 5px;
+    }
+  }
+}

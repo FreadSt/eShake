@@ -1,0 +1,72 @@
+.restore-password{
+  min-height: 100vh;
+  background: transparent url('../../assets/login/bg.svg') fixed center center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  .restore-block{
+    padding: 40px 30px 30px 30px;
+    width: 387px;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid rgba(88, 150, 139, 0.3);
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(88, 150, 139, 0.15), 0 10px 20px rgba(88, 150, 139, 0.15);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title{
+      font-family: 'Rubik Bold';
+      font-size: 24px;
+      line-height: 20px;
+      margin: 0 0 30px 0;
+      color: rgba(22, 23, 33, 0.8);
+      letter-spacing: 0.01em;
+    }
+    .sub-title{
+      color: rgba(22, 23, 33, 0.8);
+      font-family: 'Rubik Regular';
+      opacity: 0.5;
+      margin: 0 0 15px 0;
+      font-size: 14px;
+    }
+    .description-text{
+      color: rgba(22, 23, 33, 0.8);
+      font-family: 'Rubik Regular';
+      font-size: 16px;
+      line-height: 140%;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+    .restore-button{
+      margin-top: 20px;
+      width: 327px;
+      height: 50px;
+      background: #5BBEB0;
+      font-family: 'Rubik Regular';
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 19px 0 16px;
+      box-sizing: border-box;
+      border: none;
+      letter-spacing: 0.01em;
+      font-size: 16px;
+      line-height: 19px;
+      cursor: pointer;
+      color: #FFFFFF;
+      outline: none;
+      .right-icon{
+        width: 19.24px;
+        height: 19.01px;
+      }
+      .cross-icon{
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}

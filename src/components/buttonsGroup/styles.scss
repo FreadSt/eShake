@@ -1,0 +1,342 @@
+.buttons-group{
+  width: 318px;
+  display: flex;
+  flex-direction: column;
+  a{
+    text-decoration: none;
+  }
+  .transparent-border-button{
+    width: 100%;
+    font-family: 'Rubik Regular';
+    border: 1px solid #161721;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px 0 16px;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    color: #161721;
+    outline: none;
+    background-color: transparent;
+    height: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    &[disabled]{
+      opacity: 0.5;
+    }
+  }
+  .red-button{
+    width: 100%;
+    font-family: 'Rubik Regular';
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px 0 16px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    outline: none;
+    background: #FF6868;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  .green-button{
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    font-family: 'Rubik Regular';
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px 0 16px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    outline: none;
+    background: #5BBEB0;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+}
+
+.refund-deal-modal{
+  width: 386px;
+  outline: none;
+  height: 265px;
+  border: 1px solid rgba(88, 150, 139, 0.3);
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 30px 16px 16px 16px;
+  .refund-deal-title{
+    font-size: 20px;
+    font-family: 'Rubik Bold';
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: rgba(22, 23, 33, 0.8);
+  }
+  .refund-deal-desc{
+    font-size: 16px;
+    line-height: 140%;
+    color: #000000;
+    opacity: 0.5;
+    font-family: 'Rubik Regular';
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .modal-buttons-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    .cancel-button{
+      border: 1px solid rgb(139, 139, 144);
+      border-radius: 5px;
+      font-family: 'Rubik Regular';
+      background-color: transparent;
+      height: 50px;
+      padding: 0 16px 0 16px;
+      width: 169px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 19px;
+      color: rgb(139, 139, 144);
+      cursor: pointer;
+    }
+    .continue-button{
+      border: none;
+      border-radius: 5px;
+      background: #5BBEB0;
+      font-family: 'Rubik Regular';
+      height: 50px;
+      padding: 0 16px 0 16px;
+      width: 169px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+  }
+  &-error{
+    width: 386px;
+    outline: none;
+    height: 205px;
+    border: 1px solid rgba(88, 150, 139, 0.3);
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px 16px 16px 16px;
+    .error-description{
+      color: #000000;
+      opacity: 0.5;
+      font-size: 16px;
+      text-align: center;
+      line-height: 140%;
+      font-family: 'Rubik Regular';
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .error-title{
+      text-align: center;
+      color: #FF6868;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      font-family: 'Rubik Bold';
+    }
+    .modal-buttons-block{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      .cancel-button{
+        border: 1px solid rgb(139, 139, 144);
+        border-radius: 5px;
+        background-color: transparent;
+        height: 50px;
+        padding: 0 16px 0 16px;
+        width: 169px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgb(139, 139, 144);
+        cursor: pointer;
+        img{
+          color: rgb(139, 139, 144);
+        }
+      }
+      .continue-button{
+        border: none;
+        border-radius: 5px;
+        background: #5BBEB0;
+        height: 50px;
+        padding: 0 16px 0 16px;
+        width: 169px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.close-disput-modal{
+  width: 386px;
+  outline: none;
+  height: 265px;
+  border: 1px solid rgba(88, 150, 139, 0.3);
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px 16px 16px;
+  .close-disput-title{
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Rubik Bold';
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: rgba(22, 23, 33, 0.8);
+  }
+  .close-disput-desc{
+    font-size: 16px;
+    font-family: 'Rubik Regular';
+    line-height: 140%;
+    color: #000000;
+    opacity: 0.5;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .modal-buttons-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    .cancel-button{
+      border: 1px solid rgb(139, 139, 144);
+      border-radius: 5px;
+      background-color: transparent;
+      height: 50px;
+      font-family: 'Rubik Regular';
+      padding: 0 16px 0 16px;
+      width: 169px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 19px;
+      color: rgb(139, 139, 144);
+      cursor: pointer;
+    }
+    .continue-button{
+      border: none;
+      border-radius: 5px;
+      background: #5BBEB0;
+      height: 50px;
+      padding: 0 16px 0 16px;
+      font-family: 'Rubik Regular';
+      width: 169px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      cursor: pointer;
+    }
+  }
+  &-error{
+    width: 386px;
+    outline: none;
+    height: 186px;
+    border: 1px solid rgba(88, 150, 139, 0.3);
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px 16px 16px 16px;
+    .error-description{
+      color: #000000;
+      opacity: 0.5;
+      font-size: 16px;
+      text-align: center;
+      line-height: 140%;
+      font-family: 'Rubik Regular';
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .error-title{
+      text-align: center;
+      color: #FF6868;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      font-family: 'Rubik Bold';
+    }
+    .modal-buttons-block{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      .cancel-button{
+        border: 1px solid rgb(139, 139, 144);
+        border-radius: 5px;
+        background-color: transparent;
+        height: 50px;
+        font-family: 'Rubik Regular';
+        padding: 0 16px 0 16px;
+        width: 169px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 19px;
+        color: rgb(139, 139, 144);
+        cursor: pointer;
+      }
+      .continue-button{
+        border: none;
+        border-radius: 5px;
+        background: #5BBEB0;
+        height: 50px;
+        padding: 0 16px 0 16px;
+        font-family: 'Rubik Regular';
+        width: 169px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+  }
+}

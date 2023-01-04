@@ -1,0 +1,19 @@
+@import "./assets/fonts/fonts.css";
+
+body{
+  background-color: rgb(241, 243, 248);
+  margin: 0;
+  padding: 0;
+}
+.App{
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  outline: none;
+}
+
+.MuiCircularProgress-colorPrimary {
+  color: #5BBEB0 !important;
+}

@@ -1,0 +1,143 @@
+.disput-card{
+  width: 100%;
+  height: 167px;
+  background-color: #fff;
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid rgba(88, 150, 139, 0.3);
+  margin-bottom: 22px;
+  padding: 11px 16px 11px 24px;
+  box-sizing:border-box;
+  .client-block{
+    width: 297px;
+    height: 100%;
+    border-right: 1px solid rgb(232, 239, 238);
+    padding-top: 9px;
+    padding-right: 20px;
+    box-sizing:border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .client-text-block{
+      .title{
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(22, 23, 33, 0.8);
+        letter-spacing: 0.01em;
+        margin: 15px 0 10px 0;
+        white-space: nowrap;
+        font-family: 'Rubik Regular';
+      }
+      .text{
+        margin: 0;
+        height: 34px;
+        display: flex;
+        align-items: flex-end;
+        color: #161721;
+        opacity: 0.5;
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        font-family: 'Rubik Regular';
+      }
+    }
+  }
+  .agreement-block{
+    padding-top: 9px;
+    padding-left: 20px;
+    box-sizing:border-box;
+    height: 100%;
+    width: 297px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .agreement-status{
+      display: flex;
+      flex-direction: column;
+      .name-block{
+        display: flex;
+        justify-content: space-between;
+        .agreement-name{
+          font-size: 18px;
+          margin: 0;
+          font-family: 'Rubik Regular';
+          line-height: 21px;
+          color: #161721;
+          cursor: pointer;
+          letter-spacing: 0.01em;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+        .agreement-cost{
+          font-size: 18px;
+          line-height: 21px;
+          font-family: 'Rubik Bold';
+          color: #161721;
+          font-weight: bold;
+        }
+      }
+      .date-block{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        .date{
+          font-family: 'Rubik Regular';
+          color: #161721;
+          font-size: 14px;
+          line-height: 17px;
+          letter-spacing: 0.01em;
+          opacity: 0.5;
+          i{
+            color: #161721;
+            opacity: 0.5;
+            font-size: 14px;
+            margin-right: 5px;
+          }
+        }
+        .milestones{
+          font-family: 'Rubik Regular';
+          color: #161721;
+          font-size: 14px;
+          line-height: 17px;
+          letter-spacing: 0.01em;
+          opacity: 0.5;
+        }
+      }
+    }
+    .agreement-text{
+      margin: 20px 0 0 0;
+      font-family: 'Rubik Regular';
+      color: #161721;
+      opacity: 0.5;
+      font-size: 14px;
+      line-height: 17px;
+      p{
+        margin: 0;
+        font-family: 'Rubik Regular';
+      }
+    }
+    .dispute-status{
+      margin: 15px 0 0 0;
+      display: flex;
+      height: 60px;
+      justify-content: flex-start;
+      flex-direction: column;
+      .warn-block{
+        margin-bottom: 2px;
+        font-size: 16px;
+        line-height: 150%;
+        font-family: 'Rubik Regular';
+        img{
+          margin-right: 13px;
+        }
+      }
+      .desc-block{
+        color: #161721;
+        opacity: 0.5;
+        font-size: 14px;
+        line-height: 17px;
+        font-family: 'Rubik Regular';
+      }
+    }
+  }
+}

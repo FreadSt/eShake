@@ -1,0 +1,102 @@
+.home{
+  .title-block{
+    border-bottom: 1px solid rgb(175, 177, 183);
+    h1{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      font-family: 'Rubik Bold';
+      margin: 30px 0 30px 0;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      color: rgb(66, 67, 65);
+    }
+  }
+  .content-block{
+    margin-top: 20px;
+    display: flex;
+    .disputs-block{
+      min-width: 635px;
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .loader{
+        font-family: 'Rubik Regular';
+        color: rgb(66, 67, 65);
+        font-size: 14px;
+      }
+      .sub-header{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        h2{
+          margin-top: 3px;
+          font-family: 'Rubik Regular';
+          margin-bottom: 0;
+          color: rgb(66, 67, 65);
+        }
+        .toggle-buttons{
+          width: 318px;
+          display: flex;
+          height: 35px;
+          overflow: hidden;
+          border: 1px solid rgb(198, 214, 216);
+          border-radius: 10px;
+          button{
+            width: 50%;
+            height: 100%;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.01em;
+            border: none;
+            font-family: 'Rubik Regular';
+            cursor: pointer;
+            outline: none;
+          }
+          .active-button{
+            background-color: #5BBEB0;
+            color: #fff;
+            outline: none;
+          }
+          .inactive-button{
+            background-color: transparent;
+            color: rgb(175, 177, 183);
+            outline: none;
+          }
+        }
+      }
+      .infinite-scroll-component{
+        overflow: visible!important;
+      }
+    }
+    .messages-block{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .title{
+        width: 100%;
+        font-family: 'Rubik Regular';
+        margin: 7px 0 20px 0;
+        font-size: 24px;
+        line-height: 20px;
+        letter-spacing: 0.01em;
+        color: rgb(66, 67, 65);
+      }
+      .message-items-wrap{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .infinite-scroll-component{
+          overflow: visible!important;
+        }
+        .infinite-scroll-component__outerdiv{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
