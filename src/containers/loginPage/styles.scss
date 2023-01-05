@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   .login-block{
-    padding: 50px 30px 30px 30px;
+    padding: 40px 30px 30px 30px;
     width: 387px;
     height: auto;
     background: #FFFFFF;
@@ -18,10 +18,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .app-logo{
-      width: 167px;
-      height: 145px;
-      margin-bottom: 45px;
+    .text-logo{
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .app-logo{
+        width: 58px;
+        height: 66px;
+      }
+      .title-logo{
+        font-family: 'GilroyRegular';
+        font-size: 48px;
+        color: #19252E;
+        margin: 10px 0 0;
+      }
+      .suptitle-logo{
+        font-family: 'GilroyRegular';
+        font-size: 14px;
+        color: #19252E;
+        opacity: 0.5;
+      }
     }
     .custom-margin{
       margin-bottom: 15px;
@@ -33,7 +50,7 @@
       margin-bottom: 10px;
       .error-block{
         margin-top: 5px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         font-size: 14px;
         line-height: 20px;
         color: rgba(255, 104, 104, 0.8);
@@ -44,7 +61,7 @@
         color: rgba(22, 23, 33, 0.8);
         font-size: 16px;
         line-height: 20px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         margin-top: 30px;
       }
     }
@@ -52,9 +69,9 @@
       margin-top: 40px;
       width: 327px;
       height: 50px;
-      background: #5BBEB0;
-      font-family: 'Rubik Regular';
-      border-radius: 10px;
+      background: #5DB9FF;
+      font-family: 'GilroyRegular';
+      border-radius: 25px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -71,6 +88,31 @@
         width: 19.24px;
         height: 19.01px;
       }
+    }
+    .login-button-disabled{
+      margin-top: 40px;
+      width: 327px;
+      height: 50px;
+      background: #5DB9FF;
+      font-family: 'GilroyRegular';
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 19px 0 16px;
+      box-sizing: border-box;
+      border: none;
+      letter-spacing: 0.01em;
+      font-size: 16px;
+      line-height: 19px;
+      cursor: pointer;
+      color: #FFFFFF;
+      outline: none;
+      .right-icon{
+        width: 19.24px;
+        height: 19.01px;
+      }
+      opacity: 0.5;
     }
   }
 }

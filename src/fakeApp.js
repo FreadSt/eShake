@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import Layout from "./components/layout";
 import HomePage from "./containers/homePage";
 import LoginPage from "./containers/loginPage";
@@ -16,8 +16,7 @@ import { ApolloProvider } from '@apollo/client';
 import { client } from "./helpers/apiClient";
 import './styles.scss';
 
-const App = () => {
-    const [login, setLogin] = useState()
+const App1 = () => {
     return (
         <ApolloProvider client={client}>
             <Provider store={store}>
@@ -50,9 +49,4 @@ const App = () => {
     )
 }
 
-export default App;
-
-/*
-
-*/
-
+export default App1;

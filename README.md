@@ -68,3 +68,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+const App = () => {
+    return (
+        <ApolloProvider client={client}>
+            <Provider store={store}>
+                <Router basename="/admin">
+                    <div className="App">
+                        <Switch>
+                            <Route exact path={'/login'} component={LoginPage}/>
+                            {/*<Route path={'/restore-password'} component={RestorePassword}/>*/}
+                            <PrivateRoute
+                              exact
+                              path={'/accusing-party/:type/:name/:id'}
+                              component={AccuseParty}
+                              key={'user'}
+                            />
+                            <PrivateRoute
+                              exact
+                              path={'/accused-party/:type/:name/:id'}
+                              key={'provider'}
+                              component={AccuseParty}
+                            />
+                            <PrivateRoute exact path={'/home'} component={HomePage} key={'home'}/>
+                            <PrivateRoute exact path={'/agreement'} component={AgreementPage}/>
+                            {/* <PrivateRoute exact path={'/settings'} component={SettingsPage}/> */}
+                            <PrivateRoute exact path={'/'} component={HomePage}/>
+                        </Switch>
+                    </div>
+                </Router>
+            </Provider>
+        </ApolloProvider>
+    )
+}

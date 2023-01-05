@@ -9,6 +9,7 @@ import {getAdminData} from "../../redux/reducers/home";
 import {connect} from 'react-redux';
 import {graphQLApiClient} from "../../helpers/apiClient";
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Layout from '../../components/layout';
 
 class HomePage extends PureComponent {
   constructor(props) {
@@ -71,7 +72,6 @@ class HomePage extends PureComponent {
         })
         this.setState({messages: [...messages, ...newMessages], messagesPage: messagesPage + 1})
       });
-
   }
 
   renderToggleButtons = () => {
@@ -118,6 +118,7 @@ class HomePage extends PureComponent {
     const {admin} = this.props;
     return (
       <CustomContainer>
+        <Layout/>
         <div className={'home'}>
           <div className={'title-block'}>
             <h1>Welcome back, {admin.fullName}</h1>

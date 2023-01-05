@@ -1,6 +1,10 @@
 import React, {PureComponent} from 'react';
 import HomeIcon from '../../assets/layout/home.svg';
-import ToggleIcon from '../../assets/layout/toggle.svg';
+import ToggleIcon from '../../assets/layout/Logout.png';
+import chatactive from "../../assets/layout/chatactive.png";
+import statsactive from "../../assets/layout/statsactive.png";
+import chatdis from "../../assets/layout/chatdis.png";
+import statsdis from "../../assets/layout/statsdis.png";
 import {Link, withRouter} from "react-router-dom";
 import {connect} from 'react-redux';
 import './styles.scss';
@@ -9,10 +13,11 @@ import DefaultIcon from "../../assets/default-avatar.png";
 import {getAdminData} from "../../redux/reducers/home";
 
 class Layout extends PureComponent {
+    
     constructor(props) {
         super(props);
         this.state = {
-            avatarImg: ''
+            avatarImg: '',
         }
     }
 
@@ -45,16 +50,26 @@ class Layout extends PureComponent {
                   className={'avatar'}
               />
               <div className={'actions-block'}>
-                  <Link to={'/home'}>
-                      <img src={HomeIcon} alt="home page"/>
-                  </Link>
+
+                <Link to={'/'}>
+                    <img src={chatdis}/>
+                </Link>
+
+                <Link to={'/'} >
+                    <img src={statsdis}/>
+                </Link>
+
                   {/* <Link to={'/settings'} className={'settings-icon'}>
                       <img
                           src={SettingsIcon}
                           alt="settings page"
                       />
                   </Link>
-                  <img src={HelpIcon} alt="help page"/> */}
+                  <img src={HelpIcon} alt="help page"/> 
+                    <Link to={'/home'}>
+                      <img src={HomeIcon} alt="home page"/>
+                  </Link>
+                  */}
               </div>
               <img
                 onClick={this.handleLogOut}

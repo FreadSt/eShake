@@ -1,17 +1,18 @@
 import React, {useEffect} from 'react';
-import LoginLogo from '../../assets/login/loginLogo.png';
+import LoginLogo from '../../assets/login/LoginPageLogo.png';
 import EnvelopeIcon from '../../assets/login/envelope.svg';
 import LockIcon from '../../assets/login/lock.svg';
-import ArrowRightIcon from '../../assets/login/arrow-right.png';
-import { reduxForm, Field } from 'redux-form';
+import ArrowRightIcon from '../../assets/login/rigtharrow.png';
+import { reduxForm, Field, formValueSelector} from 'redux-form';
 import CustomInput from "../../components/customInput";
 import {validate} from "./validation";
 import { useMutation } from '@apollo/client';
 import { useHistory } from "react-router-dom";
 import { LOG_IN } from "../../gqlQueries";
 import './styles.scss';
+import { connect } from 'react-redux';
 
-const LoginPage = ({handleSubmit}) => {
+let LoginPage = ({handleSubmit, email, password}) => {
     const [handleLogin, { data, error }] = useMutation(LOG_IN, {errorPolicy: 'all'});
     const history = useHistory();
 
@@ -22,7 +23,26 @@ const LoginPage = ({handleSubmit}) => {
         }
     }, [data, history])
 
+    console.log(email, password, "props")
+    
+    const checkValidValues = () => {
+        if (!email) {
+            return true
+        }
+        if (email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+            return true
+        }
+        if (!password) {
+            return true
+        }
+        if (password && password.length < 3) {
+            return true
+        }
+        return false
+    }
+
     const submitLogin = (values) => {
+        console.log("handle");
         const {email, password} = values;
         handleLogin({variables: {email, password}});
     }
@@ -33,11 +53,15 @@ const LoginPage = ({handleSubmit}) => {
     return (
         <div className={'login-page'}>
             <div className={'login-block'}>
-                <img
-                    src={LoginLogo}
-                    alt="app logo"
-                    className={'app-logo'}
-                />
+                <div className={'text-logo'}>
+                    <img
+                        src={LoginLogo}
+                        alt="app logo"
+                        className={'app-logo'}
+                    />
+                    <h1 className={'title-logo'}>eShake</h1>
+                    <span className={'suptitle-logo'}>THE TRUSTED HANDSHAKE</span>
+                </div>
                 <Field
                     name={'email'}
                     label={'Email'}
@@ -59,8 +83,8 @@ const LoginPage = ({handleSubmit}) => {
                         {/*<Link className={'restore-link'} to={'/restore-password'}>Restore Password</Link>*/}
                     </div>
                 }
-                <button className={'login-button'} onClick={handleSubmit(submitLogin)}>
-                    Log In
+                <button className={!checkValidValues() ? 'login-button' : "login-button-disabled"} onClick={handleSubmit(submitLogin)} disabled={checkValidValues()}>
+                    Sign In
                     <img
                         src={ArrowRightIcon}
                         alt="login icon"
@@ -72,7 +96,15 @@ const LoginPage = ({handleSubmit}) => {
     )
 }
 
-export default reduxForm({
-    form: 'login',
-    validate: validate
-})(LoginPage);
+LoginPage = reduxForm({form: 'login', validate: validate})(LoginPage)
+
+const selector = formValueSelector('login')
+LoginPage = connect(state => {
+    const email = selector(state, 'email')
+    const password = selector(state, 'password')
+    return{
+        email, password
+    }
+})(LoginPage)
+
+export default LoginPage;

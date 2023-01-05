@@ -5,7 +5,7 @@
       font-style: normal;
       font-weight: bold;
       font-size: 32px;
-      font-family: 'Rubik Bold';
+      font-family: 'GilroyRegular';
       margin: 30px 0 30px 0;
       line-height: 20px;
       letter-spacing: 0.01em;
@@ -22,7 +22,7 @@
       align-items: center;
       flex-direction: column;
       .loader{
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         color: rgb(66, 67, 65);
         font-size: 14px;
       }
@@ -33,7 +33,7 @@
         margin-bottom: 10px;
         h2{
           margin-top: 3px;
-          font-family: 'Rubik Regular';
+          font-family: 'GilroyRegular';
           margin-bottom: 0;
           color: rgb(66, 67, 65);
         }
@@ -51,12 +51,12 @@
             line-height: 19px;
             letter-spacing: 0.01em;
             border: none;
-            font-family: 'Rubik Regular';
+            font-family: 'GilroyRegular';
             cursor: pointer;
             outline: none;
           }
           .active-button{
-            background-color: #5BBEB0;
+            background-color: #5DB9FF;
             color: #fff;
             outline: none;
           }

@@ -1,5 +1,5 @@
-const SERVER_URL = 'http://eshakeapp.com';
-const WS_URL = 'ws://eshakeapp.com/graphql';
+const SERVER_URL = 'https://eshakeapp.com';
+const WS_URL = 'wss://eshakeapp.com/graphql';
 
 export {
   SERVER_URL,
