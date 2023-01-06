@@ -2,7 +2,7 @@ import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { split, HttpLink } from '@apollo/client';
 import { getMainDefinition } from '@apollo/client/utilities';
 import {SubscriptionClient} from "subscriptions-transport-ws";
-import { SERVER_URL, WS_URL } from "../constants"
+import { SERVER_URL, WS_URL } from "../constants";
 
 const token = localStorage.getItem('access-token');
 

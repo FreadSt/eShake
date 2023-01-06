@@ -18,6 +18,8 @@ class Layout extends PureComponent {
         super(props);
         this.state = {
             avatarImg: '',
+            openChat: true,
+            openStat: false,
         }
     }
 
@@ -32,6 +34,15 @@ class Layout extends PureComponent {
         }
     }
 
+    handleToggleChat = () => {
+        this.setState({openChat: !this.state.openChat})
+        this.setState({openStat: false})
+    }
+    handleToggleStat = () => {
+        this.setState({openStat: !this.state.openStat})
+        this.setState({openChat: false})
+    }
+
     handleLogOut = () => {
         localStorage.removeItem('access-token');
         this.props.history.push('/login');
@@ -42,6 +53,7 @@ class Layout extends PureComponent {
           return null;
       }
       const {avatarImg} = this.state;
+      
       return (
           <div className={'layout'}>
               <img
@@ -51,14 +63,13 @@ class Layout extends PureComponent {
               />
               <div className={'actions-block'}>
 
-                <Link to={'/'}>
-                    <img src={chatdis}/>
+                <Link to={'/'} onClick={this.handleToggleChat}>
+                    <img src={this.state.openChat ? chatactive : chatdis}/>
                 </Link>
 
-                <Link to={'/'} >
-                    <img src={statsdis}/>
+                <Link to={'/'} onClick={this.handleToggleStat}>
+                    <img src={this.state.openStat ? statsactive : statsdis}/>
                 </Link>
-
                   {/* <Link to={'/settings'} className={'settings-icon'}>
                       <img
                           src={SettingsIcon}
@@ -73,9 +84,9 @@ class Layout extends PureComponent {
               </div>
               <img
                 onClick={this.handleLogOut}
-                  src={ToggleIcon}
-                  alt="log out button"
-                  className={'log-out-button'}
+                src={ToggleIcon}
+                alt="log out button"
+                className={'log-out-button'}
               />
           </div>
       );

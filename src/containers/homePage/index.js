@@ -10,6 +10,12 @@ import {connect} from 'react-redux';
 import {graphQLApiClient} from "../../helpers/apiClient";
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Layout from '../../components/layout';
+import pic1 from '../../assets/disputs/pic1.png';
+import pic2 from '../../assets/disputs/pic2.png';
+import pic3 from '../../assets/disputs/pic3.png';
+import rate from '../../assets/disputs/rate.png';
+
+const avatarArr = [pic1, pic2, pic3];
 
 class HomePage extends PureComponent {
   constructor(props) {

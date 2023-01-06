@@ -102,3 +102,37 @@ const App = () => {
         </ApolloProvider>
     )
 }
+
+
+{
+                  [
+                    {img:avatarArr[0], name:"Bessie Cooper", disput:"Else"},
+                    {img:avatarArr[1], name:"Bessie Cooper", disput:"Service Provider ignores my..."},
+                    {img:avatarArr[2], name:"Theresa Webb", disput:"Service Provider ignores my..."}
+                  ].map(item => {
+                    <div className={'card'}>
+                      <div className={'client'}>
+                        <div className={'client-title'}>
+                          <img src={item.img}/>
+                          <div className={'client-name'}>
+                            <div className={'name-box'}>
+                              <h1>{item.name}</h1>
+                              <span>Client</span>
+                            </div>
+                            <img src={rate}/>
+                          </div>
+                        </div>
+                        <div className={'client-about'}>
+                          <h1>{item.disput}</h1>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                              Quis vel at dictum...</p>
+                        </div>
+                      </div>
+
+                      <div className={'agreement'}>
+
+                      </div>
+
+                    </div>
+                  })
+                }

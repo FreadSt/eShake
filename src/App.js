@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import Layout from "./components/layout";
+import React from 'react';
 import HomePage from "./containers/homePage";
 import LoginPage from "./containers/loginPage";
 import AgreementPage from "./containers/agreementPage";
@@ -17,7 +16,6 @@ import { client } from "./helpers/apiClient";
 import './styles.scss';
 
 const App = () => {
-    const [login, setLogin] = useState()
     return (
         <ApolloProvider client={client}>
             <Provider store={store}>

@@ -8,13 +8,11 @@ import {START_PROCESSING_DISPUTE} from "../../gqlQueries";
 import {graphQLApiClient} from "../../helpers/apiClient";
 import './styles.scss';
 
-
 class DisputCard extends PureComponent {
 
     truncate = (str, n) => {
         return (str.length > n) ? str.substr(0, n-1) + '...' : str;
     };
-
 
     handleToAgreement = async () => {
         const variables = {disputeId: this.props.disput._id};
@@ -29,7 +27,6 @@ class DisputCard extends PureComponent {
                 console.log('Error for the start processing query is:' + error);
             }
         }
-        
         this.props.history.push('/agreement', {disput: this.props.disput})
     }
 
@@ -41,8 +38,8 @@ class DisputCard extends PureComponent {
               className={`disput-card`}
               style={
                   {
-                      borderWidth: disput.state === 'STARTED' ? 3 : 1,
-                      borderColor: disput.state === 'STARTED' ? '#5BBEB0' : 'rgba(88, 150, 139, 0.3)'
+                    borderWidth: disput.state === 'STARTED' ? 3 : 1,
+                    borderColor: disput.state === 'STARTED' ? '#5BBEB0' : 'rgba(88, 150, 139, 0.3)'
                   }
               }
             >
