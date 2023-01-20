@@ -69,6 +69,110 @@
       }
       .infinite-scroll-component{
         overflow: visible!important;
+        margin: 0px 0;
+        .card{
+          display: flex;
+          background: #FFFFFF;
+          box-shadow: 0px 10px 24px rgba(171, 215, 255, 0.1);
+          border: 1px solid rgba(93, 185, 255, 0.3);
+          margin: 10px 0;
+          border-radius: 10px;
+          padding: 20px;
+          .client{
+            .client-about{
+              h1{
+                font-family: 'GilroyRegular';
+                font-size: 16px;
+              }
+              p{
+                font-family: 'GilroyRegular';
+                font-size: 14px;
+              }
+            }
+            .client-box{
+              display: flex;
+              align-items: center;
+              .avatar{
+                width: 40px;
+                height: 40px;
+                margin: 0px 10px 0px 0px;
+              }
+              .client-title{
+                width: 220px;
+                align-items: center;
+                .rate{
+                  margin-top: 5px;
+                }
+                .name-box{
+                  width: 165px;
+                  align-items: center;
+                  justify-content: space-between;
+                  display: flex;
+                  .name{
+                    margin: 0;
+                    font-family: 'GilroyRegular';
+                    font-size: 18px;
+                  }
+                  .status{
+                    font-size: 10px;
+                    font-family: 'GilroyRegular';
+                    opacity: 0.5;
+                    margin:0px 0px 10px 5px;
+                  }
+                }
+              }
+            }
+          }
+          .vl{
+            border-left: 1px solid #19252E;
+            height: 135px;
+            opacity: 0.2;
+            margin: 0px 10px 0px 10px;
+            align-self: center;
+          }
+          .agreement{
+            padding: 0px 10px;
+            font-family: 'GilroyRegular';
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .inner-box{
+              .agreement-field{
+                display: flex;
+                justify-content: space-between;
+                margin: 5px 0;
+                .agreement-name{
+                  font-weight: bold;
+                  font-size: 18px;
+                }
+                .number{
+                  font-weight: bold;
+                  font-size: 18px;
+                }
+              }
+              .agreement-date{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .date-box{
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  .date-img{
+                    width: 15px;
+                    height: 16px;
+                  }
+                  .date{
+                    margin-left: 5px;
+                  }
+                }
+              }
+            }
+            p{
+              font-size: 14px;
+            }
+          }
+        }
       }
     }
     .messages-block{

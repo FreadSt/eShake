@@ -1,6 +1,24 @@
 .custom-container{
-  max-width: 1300px;
+  align-self: flex-start;
   width: 100%;
-  margin-left: 100px;
+  margin-left: 10vh;
   margin-right: 20px;
+}
+
+@media(max-width:1380px){
+  .custom-container{
+    width: 90%;
+  }
+}
+
+@media(max-width:880px){
+  .custom-container{
+    width: 80%;
+  }
+}
+
+@media(min-width:1381px) {
+  .custom-container{
+    margin-left: 12vh;
+  }
 }

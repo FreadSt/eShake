@@ -4,6 +4,8 @@ import ClientBlock from "../clientBlock";
 import {withRouter} from 'react-router-dom';
 import TerminatedIcon from '../../assets/terminated-icon.svg';
 import ClosedIcon from '../../assets/closed-icon.svg';
+import calendar from "../../assets/disputs/calendar.png";   
+import close from "../../assets/dashboard/close.png";
 import {START_PROCESSING_DISPUTE} from "../../gqlQueries";
 import {graphQLApiClient} from "../../helpers/apiClient";
 import './styles.scss';
@@ -36,12 +38,14 @@ class DisputCard extends PureComponent {
         return (
             <div
               className={`disput-card`}
-              style={
+              /* 
+                style={
                   {
                     borderWidth: disput.state === 'STARTED' ? 3 : 1,
-                    borderColor: disput.state === 'STARTED' ? '#5BBEB0' : 'rgba(88, 150, 139, 0.3)'
+                    borderColor: disput.state === 'STARTED' ? '#5DB9FF' : 'rgba(88, 150, 139, 0.3)'
                   }
               }
+              */
             >
                 <div className={'client-block'}>
                     <ClientBlock
@@ -61,7 +65,7 @@ class DisputCard extends PureComponent {
                             <span className={'agreement-cost'}>{disput.agreement.totalPrice}</span>
                         </div>
                         <div className={'date-block'}>
-                            <span className={'date'}><i className="far fa-calendar-alt"/>
+                            <span className={'date'}><img src={calendar}/>
                             {moment(disput.agreement.createdAt).format('D.MM.YYYY')}
                             </span>
                             <span className={'milestones'}>
@@ -72,13 +76,13 @@ class DisputCard extends PureComponent {
                     </div>
                     {(disput.state !== 'CLOSED' && disput.state !== 'REFUNDED') &&
                     <div className={'agreement-text'}>
-                        <p>{this.truncate(disput.agreement.description, 30)}</p>
+                        <p>{this.truncate(disput.agreement.description, 90)}</p>
                     </div>
                     }
                     {disput.state === 'CLOSED' &&
                         <div className={'dispute-status'}>
-                            <div className={'warn-block'} style={{color: '#5BBEB0'}}>
-                                <img src={ClosedIcon} alt="closed status"/>
+                            <div className={'warn-block'} style={{color: '#5DB9FF'}}>
+                                <img src={close} alt="closed status"/>
                                 Dispute closed
                             </div>
                             <div className={'desc-block'} style={{marginLeft: 23}}>

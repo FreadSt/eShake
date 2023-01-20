@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
-import Tick from '../../assets/messages/tick.svg';
-import DoubleTick from '../../assets/messages/double-tick.svg';
+import Tick from '../../assets/messages/got.svg';
+import DoubleTick from '../../assets/messages/readed.svg';
 import DefaultIcon from '../../assets/default-avatar.png'
 import moment from 'moment';
 import {handleGetAvatarFile} from "../../helpers/methods";
@@ -31,10 +31,12 @@ class LatestMessage extends PureComponent {
     if (!message) return null;
       return (
           <div className={'latest-message'}
-            style={{
+          /* 
+          style={{
               borderWidth: isUnreadForAdmin ? 3 : 1,
-              borderColor: isUnreadForAdmin ? '#5BBEB0' : 'rgba(88, 150, 139, 0.3)'
+              borderColor: isUnreadForAdmin ? '#5DB9FF' : 'rgba(88, 150, 139, 0.3)'
             }}
+          */
           >
               <div className={'message-content'}>
                   <img src={avatarImg ? avatarImg : DefaultIcon} alt="avatar user" className={'avatar'}/>

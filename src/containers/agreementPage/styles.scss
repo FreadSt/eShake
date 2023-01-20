@@ -20,7 +20,7 @@
         line-height: 20px;
         letter-spacing: 0.01em;
         color: rgb(66, 67, 65);
-        font-family: 'Rubik Bold';
+        font-family: 'GilroyRegular';
       }
     }
     .toggle-buttons{
@@ -31,7 +31,7 @@
       border: 1px solid rgb(198, 214, 216);
       border-radius: 10px;
       button{
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         width: 50%;
         height: 100%;
         font-size: 16px;
@@ -42,7 +42,7 @@
         outline: none;
       }
       .active-button{
-        background-color: #5BBEB0;
+        background-color: #5DB9FF;
         color: #fff;
       }
       .inactive-button{
@@ -76,7 +76,7 @@
           padding: 2px 15px 0 15px;
           border-radius: 13px;
           width: fit-content;
-          font-family: 'Rubik Regular';
+          font-family: 'GilroyRegular';
           font-size: 12px;
           box-sizing: border-box;
           line-height: 15px;
@@ -85,7 +85,7 @@
       }
       .provider-title{
         font-size: 20px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         line-height: 24px;
         color: #161721;
         letter-spacing: 0.01em;
@@ -102,7 +102,7 @@
       }
       .info-title{
         font-size: 20px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         line-height: 24px;
         letter-spacing: 0.01em;
         color: #161721;
@@ -118,7 +118,7 @@
         justify-content: space-between;
         .name{
           font-size: 16px;
-          font-family: 'Rubik Regular';
+          font-family: 'GilroyRegular';
           line-height: 19px;
           letter-spacing: 0.01em;
           color: #161721;
@@ -127,7 +127,7 @@
         .desc{
           font-size: 18px;
           line-height: 21px;
-          font-family: 'Rubik Regular';
+          font-family: 'GilroyRegular';
           letter-spacing: 0.01em;
           color: #161721;
         }
@@ -140,14 +140,14 @@
         opacity: 0.8;
         margin-top: 30px;
         margin-bottom: 20px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
       }
       .milestones-title{
         margin-top: 30px;
         margin-bottom: 20px;
         font-size: 20px;
         line-height: 24px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         letter-spacing: 0.01em;
         color: #161721;
       }

@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import CustomContainer from "../../components/customContainer";
 import ArrowLeftIcon from '../../assets/agreement/arrow-left.png';
 import {Link} from 'react-router-dom';
-import './styles.scss'
+import './styles.scss';
 import DescriptionBlock from "../../components/descriptionBlock";
 import ClientBlock from "../../components/clientBlock";
 import MilestoneCard from "../../components/milestoneCard";
@@ -12,8 +12,9 @@ import {graphQLApiClient} from "../../helpers/apiClient";
 import {DISPUTE_MESSAGES} from "../../gqlQueries";
 import {MessageComponent, MessageComponentOnlyContent} from "../../components/messageComponent";
 import AttachedFile from "../../components/attachedFileComponent";
-import moment from 'moment'
+import moment from 'moment';
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Layout from '../../components/layout';
 
 class AgreementPage extends PureComponent {
     constructor(props) {
@@ -105,7 +106,7 @@ class AgreementPage extends PureComponent {
         )
     }
 
-    handleRenderAttachments = (agreement) => {
+    /*handleRenderAttachments = (agreement) => {
         if (agreement && !!agreement.attachedFiles.length) {
             return agreement.attachedFiles.map((item) => {
                 return(
@@ -113,16 +114,16 @@ class AgreementPage extends PureComponent {
                 )
             })
         }
-    }
+    }*/
 
-    handleRenderMilestones = (agreement) => {
+    /*handleRenderMilestones = (agreement) => {
         if(!!agreement.milestones.length)
         return agreement.milestones.map((milestone) => {
             return(
                 <MilestoneCard agreementState={agreement.agreementState} key={milestone._id} milestone={milestone}/>
             )
         })
-    }
+    }*/
 
     render() {
         const {toggleState, hasMore} = this.state;
@@ -131,6 +132,7 @@ class AgreementPage extends PureComponent {
         // console.log(`Agreement page is equal to ${disput.state}`);
         return (
             <CustomContainer>
+                <Layout/>
                 <div className={'agreement-page'}>
                     <div className={'title-block'}>
                         <div className={'title-wrapper'}>
@@ -181,12 +183,12 @@ class AgreementPage extends PureComponent {
                                     <span className={'name'}>Payment Method</span>
                                     <span className={'desc'}>Verified</span>
                                 </div>
-                                {!!agreement.attachedFiles.length &&
+                                {/*!!agreement.attachedFiles.length &&
                                   <h4 className={'attachments-title'}>Attachments</h4>
-                                }
-                                {this.handleRenderAttachments(agreement)}
+                                */}
+                                {/*this.handleRenderAttachments(agreement)*/}
                                 <h4 className={'milestones-title'}>Milestones</h4>
-                                {this.handleRenderMilestones(agreement)}
+                                {/*this.handleRenderMilestones(agreement)*/}
                             </div> :
                             <div className={'description-wrapper'}>
                               <div className={'message-thread-wrapper'}>
@@ -203,6 +205,7 @@ class AgreementPage extends PureComponent {
                                   useWindow={false}
                                 >
                                   {this.handleRenderMessages()}
+                                  
                                 </InfiniteScroll>
                               </div>
                             </div>
@@ -212,7 +215,7 @@ class AgreementPage extends PureComponent {
                                 disputId={disput._id}
                                 disputeState={disput.state}
                                 userId={agreement.client._id}
-                                providerId={agreement.provider._id}
+                                /*providerId={agreement.provider._id}*/
                                 agreementName={agreement.name}
                             />
                         </div>

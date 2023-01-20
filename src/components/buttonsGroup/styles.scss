@@ -7,7 +7,7 @@
   }
   .transparent-border-button{
     width: 100%;
-    font-family: 'Rubik Regular';
+    font-family: 'GilroyRegular';
     border: 1px solid #161721;
     box-sizing: border-box;
     border-radius: 10px;
@@ -25,13 +25,21 @@
     height: 40px;
     margin-bottom: 20px;
     cursor: pointer;
+    .wallet-icon{
+      width: 15px;
+      height: 15px;
+    }
+    .close-icon{
+      width: 15px ;
+      height: 15px;
+    }
     &[disabled]{
       opacity: 0.5;
     }
   }
   .red-button{
     width: 100%;
-    font-family: 'Rubik Regular';
+    font-family: 'GilroyRegular';
     border: none;
     box-sizing: border-box;
     border-radius: 10px;
@@ -48,14 +56,18 @@
     height: 40px;
     cursor: pointer;
     margin-bottom: 20px;
+    .wallet-icon{
+      width: 15px;
+      height: 15px;
+    }
   }
-  .green-button{
+  .blue-button{
     width: 100%;
     border: none;
     box-sizing: border-box;
     border-radius: 10px;
     display: flex;
-    font-family: 'Rubik Regular';
+    font-family: 'GilroyRegular';
     align-items: center;
     justify-content: space-between;
     padding: 0 18px 0 16px;
@@ -64,53 +76,66 @@
     letter-spacing: 0.01em;
     color: #FFFFFF;
     outline: none;
-    background: #5BBEB0;
+    background: #5DB9FF;
     height: 40px;
     cursor: pointer;
     margin-bottom: 20px;
+    .close-icon{
+      width: 15px;
+      height: 15px;
+    }
   }
 }
 
 .refund-deal-modal{
-  width: 386px;
+  width: 395px;
   outline: none;
-  height: 265px;
+  height: 292px;
   border: 1px solid rgba(88, 150, 139, 0.3);
   box-sizing: border-box;
   background: #FFFFFF;
   border-radius: 10px;
-  padding: 30px 16px 16px 16px;
+  padding: 20px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  .close-disput-icon{
+    align-self: center;
+    width: 60px;
+    height: 60px;
+    margin: 0px 0 10px;
+  }
   .refund-deal-title{
     font-size: 20px;
-    font-family: 'Rubik Bold';
+    font-family: 'GilroyBold';
     text-align: center;
-    line-height: 20px;
+    line-height: 19px;
     letter-spacing: 0.01em;
     color: rgba(22, 23, 33, 0.8);
+    margin: 10px 0;
   }
   .refund-deal-desc{
-    font-size: 16px;
+    font-size: 15px;
     line-height: 140%;
     color: #000000;
     opacity: 0.5;
-    font-family: 'Rubik Regular';
+    font-family: 'GilroyRegular';
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 0;
   }
   .modal-buttons-block{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
+    justify-content: space-evenly;
+    margin-top: 10px;
     .cancel-button{
       border: 1px solid rgb(139, 139, 144);
-      border-radius: 5px;
-      font-family: 'Rubik Regular';
+      border-radius: 8px;
+      font-family: 'GilroyRegular';
       background-color: transparent;
-      height: 50px;
+      height: 36px;
       padding: 0 16px 0 16px;
-      width: 169px;
+      width: 143px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -122,11 +147,11 @@
     .continue-button{
       border: none;
       border-radius: 5px;
-      background: #5BBEB0;
-      font-family: 'Rubik Regular';
-      height: 50px;
+      background: #5DB9FF;
+      font-family: 'GilroyRegular';
+      height: 36px;
       padding: 0 16px 0 16px;
-      width: 169px;
+      width: 143px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -151,7 +176,7 @@
       font-size: 16px;
       text-align: center;
       line-height: 140%;
-      font-family: 'Rubik Regular';
+      font-family: 'GilroyRegular';
       margin-top: 20px;
       margin-bottom: 0;
     }
@@ -161,7 +186,7 @@
       font-size: 20px;
       line-height: 20px;
       letter-spacing: 0.01em;
-      font-family: 'Rubik Bold';
+      font-family: 'GilroyBold';
     }
     .modal-buttons-block{
       display: flex;
@@ -189,8 +214,8 @@
       .continue-button{
         border: none;
         border-radius: 5px;
-        background: #5BBEB0;
-        height: 50px;
+        background: #5DB9FF;
+        height: 36px;
         padding: 0 16px 0 16px;
         width: 169px;
         display: flex;
@@ -215,39 +240,45 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 16px 16px 16px;
+  justify-content: space-around;
+  padding: 20px 16px 16px 16px;
+  .close-disput-icon{
+    width: 60px;
+    height: 60px;
+    align-self: center;
+  }
   .close-disput-title{
     font-size: 20px;
     text-align: center;
-    font-family: 'Rubik Bold';
+    font-family: 'GilroyBold';
     line-height: 20px;
     letter-spacing: 0.01em;
     color: rgba(22, 23, 33, 0.8);
+    margin: 5px 0;
   }
   .close-disput-desc{
     font-size: 16px;
-    font-family: 'Rubik Regular';
+    font-family: 'GilroyRegular';
     line-height: 140%;
     color: #000000;
     opacity: 0.5;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 0;
   }
   .modal-buttons-block{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
+    justify-content: space-evenly;
+    margin-top: 10px;
     .cancel-button{
       border: 1px solid rgb(139, 139, 144);
-      border-radius: 5px;
+      border-radius: 8px;
       background-color: transparent;
-      height: 50px;
-      font-family: 'Rubik Regular';
+      height: 36px;
+      font-family: 'GilroyRegular';
       padding: 0 16px 0 16px;
-      width: 169px;
+      width: 143px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -258,12 +289,12 @@
     }
     .continue-button{
       border: none;
-      border-radius: 5px;
-      background: #5BBEB0;
-      height: 50px;
+      border-radius: 8px;
+      background: #5DB9FF;
+      height: 36px;
       padding: 0 16px 0 16px;
-      font-family: 'Rubik Regular';
-      width: 169px;
+      font-family: 'GilroyRegular';
+      width: 143px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -288,7 +319,7 @@
       font-size: 16px;
       text-align: center;
       line-height: 140%;
-      font-family: 'Rubik Regular';
+      font-family: 'GilroyRegular';
       margin-top: 20px;
       margin-bottom: 0;
     }
@@ -298,7 +329,7 @@
       font-size: 20px;
       line-height: 20px;
       letter-spacing: 0.01em;
-      font-family: 'Rubik Bold';
+      font-family: 'GilroyBold';
     }
     .modal-buttons-block{
       display: flex;
@@ -310,7 +341,7 @@
         border-radius: 5px;
         background-color: transparent;
         height: 50px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         padding: 0 16px 0 16px;
         width: 169px;
         display: flex;
@@ -324,10 +355,10 @@
       .continue-button{
         border: none;
         border-radius: 5px;
-        background: #5BBEB0;
+        background: #5DB9FF;
         height: 50px;
         padding: 0 16px 0 16px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         width: 169px;
         display: flex;
         align-items: center;

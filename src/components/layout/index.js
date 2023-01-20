@@ -1,10 +1,9 @@
 import React, {PureComponent} from 'react';
-import HomeIcon from '../../assets/layout/home.svg';
-import ToggleIcon from '../../assets/layout/Logout.png';
-import chatactive from "../../assets/layout/chatactive.png";
-import statsactive from "../../assets/layout/statsactive.png";
-import chatdis from "../../assets/layout/chatdis.png";
-import statsdis from "../../assets/layout/statsdis.png";
+import ToggleIcon from '../../assets/layout/Login.png';
+import chatactive from "../../assets/layout/newchatactive.png";
+import statsactive from "../../assets/layout/newstatsactive.png";
+import chatdis from "../../assets/layout/newchatdis.png";
+import statsdis from "../../assets/layout/newstatsdis.png";
 import {Link, withRouter} from "react-router-dom";
 import {connect} from 'react-redux';
 import './styles.scss';
@@ -35,17 +34,23 @@ class Layout extends PureComponent {
     }
 
     handleToggleChat = () => {
-        this.setState({openChat: !this.state.openChat})
-        this.setState({openStat: false})
+        this.setState({openChat: !this.state.openChat, openStat: false})
     }
+    
     handleToggleStat = () => {
-        this.setState({openStat: !this.state.openStat})
-        this.setState({openChat: false})
+        this.setState({openChat: false, openStat: !this.state.openStat})
     }
 
     handleLogOut = () => {
         localStorage.removeItem('access-token');
         this.props.history.push('/login');
+    }
+
+    handleLocationDashboard = () => {
+        this.props.history.push('/dashboard')
+    }
+    handleLocationChat = () => {
+        this.props.history.push('/')
     }
 
     render() {
@@ -56,19 +61,21 @@ class Layout extends PureComponent {
       
       return (
           <div className={'layout'}>
-              <img
+            <Link to={'/'}> 
+                <img
                   src={avatarImg ? avatarImg : DefaultIcon}
                   alt="avatar"
                   className={'avatar'}
-              />
+                />
+            </Link>
               <div className={'actions-block'}>
 
                 <Link to={'/'} onClick={this.handleToggleChat}>
-                    <img src={this.state.openChat ? chatactive : chatdis}/>
+                    <img src={this.props.location.pathname === '/' ? chatactive : chatdis} alt=""/>
                 </Link>
 
-                <Link to={'/'} onClick={this.handleToggleStat}>
-                    <img src={this.state.openStat ? statsactive : statsdis}/>
+                <Link to={'/dashboard'} onClick={this.handleToggleStat}>
+                    <img src={this.props.location.pathname ==='/dashboard' ? statsactive : statsdis} alt=""/>
                 </Link>
                   {/* <Link to={'/settings'} className={'settings-icon'}>
                       <img
@@ -89,7 +96,7 @@ class Layout extends PureComponent {
                 className={'log-out-button'}
               />
           </div>
-      );
+        );
     }
 }
 

@@ -14,6 +14,8 @@ import PrivateRoute from "./components/privateRoute";
 import { ApolloProvider } from '@apollo/client';
 import { client } from "./helpers/apiClient";
 import './styles.scss';
+import Dashboard from './containers/dashboardPage';
+import Layout from './components/layout';
 
 const App = () => {
     return (
@@ -40,6 +42,7 @@ const App = () => {
                             <PrivateRoute exact path={'/agreement'} component={AgreementPage}/>
                             {/* <PrivateRoute exact path={'/settings'} component={SettingsPage}/> */}
                             <PrivateRoute exact path={'/'} component={HomePage}/>
+                            <PrivateRoute exact path={'/dashboard'} component={Dashboard}/>
                         </Switch>
                     </div>
                 </Router>

@@ -6,7 +6,7 @@ class DescriptionBlock extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            customHeight: 75
+            customHeight: 175
         }
     }
 

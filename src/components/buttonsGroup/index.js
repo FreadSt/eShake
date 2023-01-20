@@ -1,8 +1,10 @@
 /* eslint-disable no-empty-pattern */
 import React, {useState, memo} from 'react';
 import ArrowRightIcon from '../../assets/buttonsGroup/arrow-right.svg';
-import BucksIcon from '../../assets/buttonsGroup/bucks.svg';
+import WalletIcon from '../../assets/buttonsGroup/wallet.png';
+import CloseIcon from '../../assets/buttonsGroup/close.png';
 import CrossIcon from '../../assets/buttonsGroup/cross.svg';
+import closedisput from '../../assets/buttonsGroup/closedisput.png';
 import {useHistory} from 'react-router-dom';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -136,14 +138,14 @@ const ButtonsGroup = ({disputId, userId, providerId, agreementName, accuseType =
               className={`${disp === 'PROCESSING' ? 'red-button': 'transparent-border-button'}`} 
               onClick={handleOpenRefundDeal}>
                 Refund Deal
-                <img src={BucksIcon} alt=" Refund Deal"/>
+                <img src={WalletIcon} alt=" Refund Deal" className={'wallet-icon'}/>
             </button>
             <button
               disabled={disp !== 'PROCESSING'}
-              className={`${disp === 'PROCESSING' ? 'green-button': 'transparent-border-button'}`}
+              className={`${disp === 'PROCESSING' ? 'blue-button': 'transparent-border-button'}`}
               onClick={handleOpenDisputModal}>
               Close Dispute
-              <img src={CrossIcon} alt="Close Dispute"/>
+              <img src={CloseIcon} alt="Close Dispute" className={'close-icon'}/>
             </button>
             <Modal
                 aria-labelledby="transition-modal-title"
@@ -160,6 +162,7 @@ const ButtonsGroup = ({disputId, userId, providerId, agreementName, accuseType =
                 <Fade in={open}>
                     {!error ?
                         <div className={'refund-deal-modal'}>
+                            <img src={closedisput} className={'close-disput-icon'}/>
                             <div className={'refund-deal-title'}>
                                 Refund Deal?
                             </div>
@@ -216,6 +219,7 @@ const ButtonsGroup = ({disputId, userId, providerId, agreementName, accuseType =
                 <Fade in={openDisputModal}>
                     {!error ?
                         <div className={'close-disput-modal'}>
+                            <img src={closedisput} className={'close-disput-icon'}/>
                             <div>
                                 <div className={'close-disput-title'}>
                                     Close Dispute?

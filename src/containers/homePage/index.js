@@ -7,15 +7,9 @@ import ComponentInfiniteScroll from 'react-infinite-scroll-component';
 import './styles.scss';
 import {getAdminData} from "../../redux/reducers/home";
 import {connect} from 'react-redux';
-import {graphQLApiClient} from "../../helpers/apiClient";
+import {client, graphQLApiClient} from "../../helpers/apiClient";
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Layout from '../../components/layout';
-import pic1 from '../../assets/disputs/pic1.png';
-import pic2 from '../../assets/disputs/pic2.png';
-import pic3 from '../../assets/disputs/pic3.png';
-import rate from '../../assets/disputs/rate.png';
-
-const avatarArr = [pic1, pic2, pic3];
 
 class HomePage extends PureComponent {
   constructor(props) {
@@ -40,7 +34,7 @@ class HomePage extends PureComponent {
   loadNextRelevantDisputes = async () => {
     const {disputesPage} = this.state;
     let variables = {page: disputesPage, limit: 8}
-
+    
     await graphQLApiClient('POST', DISPUTS, variables)
       .then(result => {
         if (!result?.data?.disputes?.results.length) this.setState({hasMore: false});
@@ -145,7 +139,8 @@ class HomePage extends PureComponent {
                   </div>
                 }
               >
-                {this.handleFilterDisputes()}
+               {this.handleFilterDisputes()}
+               {/*<DisputCard disput={{state:"a", agreement:{description:30, nuestones:"6 milestones"}}}/>*/}
               </ComponentInfiniteScroll>
             </div>
             <div className={'messages-block'}>

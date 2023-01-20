@@ -2,7 +2,7 @@
   display: flex;
   padding-bottom: 10px;
   .client-icon{
-    border: 2px solid #5BBEB0;
+    border: 2px solid #5DB9FF;
     box-sizing: border-box;
     border-radius: 50%;
   }
@@ -21,13 +21,13 @@
         letter-spacing: 0.01em;
         color: #161721;
         margin: 0;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
       }
       .status{
         position: absolute;
         top: -5px;
         right: -37px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         font-size: 10px;
         line-height: 20px;
         color: rgba(0, 0, 0, 0.8);
@@ -39,19 +39,20 @@
       display: flex;
       align-items: center;
       .filled-icon{
-        color: #5BBEB0;
+        color: #5DB9FF;
         font-size: 14px;
         margin-right: 5px;
       }
       .empty-icon{
-        color: rgb(183, 221, 215);
+        color: #5DB9FF;
+        opacity: 0.5;
         font-size: 14px;
         margin-right: 3px;
       }
       .number-of-rating{
         color: #161721;
         font-size: 16px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         line-height: 20px;
         margin-left: 5px;
         margin-right: 5px;
@@ -60,7 +61,7 @@
         color: rgba(22, 23, 33, 0.5);
         font-size: 16px;
         line-height: 20px;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
       }
     }
   }

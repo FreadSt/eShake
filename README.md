@@ -1,3 +1,6 @@
+!!!!COMMENTED ELEMENTS INSIDE agreement page!!!!
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -103,36 +106,73 @@ const App = () => {
     )
 }
 
-
-{
+                {
                   [
-                    {img:avatarArr[0], name:"Bessie Cooper", disput:"Else"},
-                    {img:avatarArr[1], name:"Bessie Cooper", disput:"Service Provider ignores my..."},
-                    {img:avatarArr[2], name:"Theresa Webb", disput:"Service Provider ignores my..."}
-                  ].map(item => {
-                    <div className={'card'}>
-                      <div className={'client'}>
-                        <div className={'client-title'}>
-                          <img src={item.img}/>
-                          <div className={'client-name'}>
-                            <div className={'name-box'}>
-                              <h1>{item.name}</h1>
-                              <span>Client</span>
+                    {img:avatarArr[0], 
+                     name:"Bessie Cooper", 
+                     disput:"Else",
+                     mile:"3 milestones",
+                     date:"28.08.2020",
+                     agreement_name:"860 BUSD",
+                    },
+                    {img:avatarArr[1], 
+                      name:"Bessie Cooper", 
+                      disput:"Service Provider ignores my...",
+                      mile:"6 milestones",
+                      date:"26.08.2020",
+                      agreement_name:"325 BUSD",
+                    },
+                    {img:avatarArr[2], 
+                      name:"Theresa Webb", 
+                      disput:"Service Provider ignores my...",
+                      mile:"1 milestones",
+                      date:"18.08.2020",
+                      agreement_name:"150 BUSD",
+                    }
+                  ].map((item,index) => {
+                    return(
+                      <div className={'card'} key={index}>
+                        <div className={'client'}>
+                          <div className={'client-box'}>
+                            <img src={item.img} className={'avatar'}/>
+                            <div className={'client-title'}>
+                              <div className={'name-box'}>
+                                <h1 className={'name'}>{item.name}</h1>
+                                <span className={'status'}>CLIENT</span>
+                              </div>
+                              <img src={rate} alt={''} className={'rate'}/>
                             </div>
-                            <img src={rate}/>
+                          </div>
+                      
+                          <div className={'client-about'}>
+                            <h1>{item.disput}</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Quis vel at dictum...</p>
                           </div>
                         </div>
-                        <div className={'client-about'}>
-                          <h1>{item.disput}</h1>
+
+                        <div className='vl'/>
+
+                        <div className={'agreement'}>
+                          <div className={'inner-box'}>
+                            <div className={'agreement-field'}>
+                              <span className={'agreement-name'}>Agreement Name</span>
+                              <span className={'number'}>{item.agreement_name}</span>
+                            </div>
+
+                            <div className='agreement-date'>
+                              <div className='date-box'>
+                                <img src={date} className={'date-img'}/>
+                                <span className={'date'}>{item.date}</span>
+                              </div>
+                              <span>{item.mile}</span>
+                            </div>
+                          </div>
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                              Quis vel at dictum...</p>
+                            Quis vel at dictum nascetur nunc dui ultri dolor sit amet...</p>
                         </div>
-                      </div>
-
-                      <div className={'agreement'}>
-
-                      </div>
-
                     </div>
+                    )
                   })
                 }
+

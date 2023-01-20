@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react';
-import {ADMIN_MESSAGES, NEW_MESSAGES, READ_ADMIN_MESSAGES, THREAD_WITH_ADMIN, SEND_MESSAGE_ADMIN, CREATE_THREAD, DISPUTE} from "../../gqlQueries";
+import {ADMIN_MESSAGES, NEW_MESSAGES, READ_ADMIN_MESSAGES, THREAD_WITH_ADMIN, SEND_MESSAGE_ADMIN, CREATE_THREAD, DISPUTE, STATS} from "../../gqlQueries";
 import {useSubscription, useQuery, useMutation} from "@apollo/client";
 import CustomContainer from "../../components/customContainer";
 import {useParams, useHistory} from 'react-router-dom';
@@ -13,6 +13,7 @@ import moment from "moment";
 import {connect} from 'react-redux';
 import {MessageComponent, MessageComponentOnlyContent} from "../../components/messageComponent";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import Layout from '../../components/layout';
 
 const AccuseParty = ({admin}) => {
   const history = useHistory();
@@ -23,6 +24,8 @@ const AccuseParty = ({admin}) => {
   const [msgText, setMsgText] = useState('');
 
   const {loading: loadingThread, error: errorThread, data: dataThread, refetch} = useQuery(THREAD_WITH_ADMIN, {variables: {userId: id}})
+  const {data:test} = useQuery(STATS)
+  console.log(test, "test")
   const {loading: loadingDispute, error: errorDispute, data: dataDispute, refetch: refetchDispute} = useQuery(DISPUTE, {variables: {disputeId: disputId}})
   const dispt = dataDispute?.dispute?.result?.state;
   const [sendMessage, {loading, }] = useMutation(SEND_MESSAGE_ADMIN, {errorPolicy: 'all'});
@@ -129,10 +132,10 @@ const AccuseParty = ({admin}) => {
     });
     return dateKeysArray.reverse().map((dateKey) => {
       return (
-        <>
+        <div className={'date-box'}>
           <div className={'date-message-block'}>{dateKey}</div>
           {renderMessageComponent(sortedMessages[dateKey])}
-        </>
+        </div>
       )
     })
   }
@@ -156,6 +159,7 @@ const AccuseParty = ({admin}) => {
 
   return (
     <CustomContainer>
+      <Layout/>
       <div className={'accuse-party-container'}>
         <div className={'header-block'}>
           <h1 className={'header-title'}>

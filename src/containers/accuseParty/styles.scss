@@ -5,7 +5,8 @@
     border-bottom: 1px solid rgb(175, 177, 183);
     .header-title{
       margin: 0;
-      font-family: 'Rubik Bold';
+      font-family: 'GilroyRegular';
+      font-weight: bold;
       color: rgba(22, 23, 33, 0.8);
       font-size: 32px;
       letter-spacing: 0.01em;
@@ -36,14 +37,14 @@
         .date-message-block{
           height: 26px;
           margin-top: 20px;
-          background-color: rgb(190, 192, 199);
+          background: #5DB9FF;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 2px 15px 0 15px;
           border-radius: 13px;
           width: fit-content;
-          font-family: 'Rubik Regular';
+          font-family: 'GilroyRegular';
           font-size: 12px;
           box-sizing: border-box;
           line-height: 15px;
@@ -64,13 +65,13 @@
         line-height: 19px;
         box-sizing: border-box;
         color: #161721;
-        font-family: 'Rubik Regular';
+        font-family: 'GilroyRegular';
         &::placeholder{
           font-size: 16px;
           line-height: 19px;
           color: #161721;
           opacity: 0.3;
-          font-family: 'Rubik Regular';
+          font-family: 'GilroyRegular';
         }
       }
     }

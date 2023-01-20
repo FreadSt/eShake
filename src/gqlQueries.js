@@ -244,6 +244,19 @@ export const ADMIN_THREADS = `
   }
 `;
 
+export const STATS = gql`
+  query stats {
+    stats{
+        activeContracts
+        closedContracts
+        frozenContracts
+        netProfit
+        overallIncome
+        overallOutcome
+    }
+  }
+`
+
 export const NEW_MESSAGES = gql`
   subscription adminNewMessages ($threadId: ObjectID!) {
     adminNewMessages (threadId: $threadId) {
