@@ -129,6 +129,8 @@ class AgreementPage extends PureComponent {
         const {toggleState, hasMore} = this.state;
         const {disput} = this.props.location.state;
         const {agreement} = disput;
+        console.log("agreementPage")
+        console.log(agreement, "agreement")
         // console.log(`Agreement page is equal to ${disput.state}`);
         return (
             <CustomContainer>
@@ -215,7 +217,7 @@ class AgreementPage extends PureComponent {
                                 disputId={disput._id}
                                 disputeState={disput.state}
                                 userId={agreement.client._id}
-                                /*providerId={agreement.provider._id}*/
+                                providerId={agreement.provider._id}
                                 agreementName={agreement.name}
                             />
                         </div>

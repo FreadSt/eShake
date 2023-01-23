@@ -34,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ButtonsGroup = ({disputId, userId, providerId, agreementName, accuseType = '', disputeState}) => {
+    console.log(userId, "userID")
+    console.log(providerId, "providerID")
     const classes = useStyles();
     const history = useHistory();
     const [open, setOpen] = useState(false);
@@ -109,6 +111,7 @@ const ButtonsGroup = ({disputId, userId, providerId, agreementName, accuseType =
     };
 
     const handleToAccuseParty = (type) => {
+        console.log(`/${type === 'user' ? 'accusing' : 'accused'}-party/${type}/${agreementName}/${type === 'user' ? userId : providerId}`)
         history.push(
             `/${type === 'user' ? 'accusing' : 'accused'}-party/${type}/${agreementName}/${type === 'user' ? userId : providerId}`,
             {userId, providerId, disputId}

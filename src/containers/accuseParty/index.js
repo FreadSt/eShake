@@ -24,6 +24,9 @@ const AccuseParty = ({admin}) => {
   const [msgText, setMsgText] = useState('');
 
   const {loading: loadingThread, error: errorThread, data: dataThread, refetch} = useQuery(THREAD_WITH_ADMIN, {variables: {userId: id}})
+  console.log(dataThread, 'THREAD_WITH')
+  console.log(id, "ID")
+
   const {data:test} = useQuery(STATS)
   console.log(test, "test")
   const {loading: loadingDispute, error: errorDispute, data: dataDispute, refetch: refetchDispute} = useQuery(DISPUTE, {variables: {disputeId: disputId}})
@@ -37,6 +40,8 @@ const AccuseParty = ({admin}) => {
         onSubscriptionData: ({ subscriptionData: { data } }) => handlerOnSubscriptionData(data)
       });
   useEffect(() => {
+    console.log("accuseParty")
+    
     if (errorThread?.message === 'Thread not found') {
       // createThread({variables: {userId: id}});
       graphQLApiClient('POST', CREATE_THREAD, {userId: id})
