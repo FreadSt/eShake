@@ -3,6 +3,7 @@ import ToggleIcon from '../../assets/layout/Login.png';
 import chatactive from "../../assets/layout/newchatactive.png";
 import statsactive from "../../assets/layout/newstatsactive.png";
 import chatdis from "../../assets/layout/newchatdis.png";
+import avatar from "../../assets/layout/avatar.png";
 import statsdis from "../../assets/layout/newstatsdis.png";
 import {Link, withRouter} from "react-router-dom";
 import {connect} from 'react-redux';
@@ -63,7 +64,7 @@ class Layout extends PureComponent {
           <div className={'layout'}>
             <Link to={'/'}> 
                 <img
-                  src={avatarImg ? avatarImg : DefaultIcon}
+                  src={avatar}
                   alt="avatar"
                   className={'avatar'}
                 />
