@@ -36,7 +36,7 @@ class ClientBlock extends Component {
                 />
                 <div className={'client-description'}>
                     <div className={'name-block'}>
-                        <p className={'name'}>{/*client.fullName*/}</p>
+                        <p className={'name'}>{client.fullName}</p>
                         <span className={'status'}>CLIENT</span>
                     </div>
                     <div className={'rating-wrapper'}>
